@@ -1,7 +1,7 @@
 # SimulationFramework
 Proof-of-concept for a simulation language parser and interpreter written in Swift 3 with Xcode 8.
 
-The idea is that a practitioner can write only the equations for a system and the interpreter will handle all of the details of numerical integration, programming, input and output.
+The idea is that a person can write only the equations for a system and the interpreter will handle all of the details of numerical integration, programming, input and output.
 
 The program is a command line tool that runs a simulation program and produces a CSV file with the results. The CSV file can be opened directly with a spreadsheet program.
 
@@ -10,14 +10,14 @@ The program is a command line tool that runs a simulation program and produces a
         destination = path for results CSV file.
     If destination is not specified, then results are written to standard output.
 
-Programming and simulation let poeple design and run experiments quickly to develop understanding of a problem. Simulation has four great benefits:
+Programming and simulation let people design and run experiments quickly to develop understanding of a problem. Simulation has four great benefits:
 
 1.	Simulation is active. People build models and test them.
 2.	Simulation models make assumptions explicit. 
 3.	Simulation models make invisible things visible. The internal workings of real systems are opaque. Simulation can make all parts of a model visible.
 4.	Simulation is dynamic and can help build intuition. Very few people can predict the results of changes in even simple systems that have exponential growth or feedback of any kind. Yet these dominate the processes in physics, physiology, sociology, politics and the environment.
 
-The language is line oriented and includes variables, integrals and derivatives. It requires names for each quantity. The language and interpreter also include many features designed to help learners avoid common problems with simulation modeling.
+The language is line oriented and includes variables, integrals and derivatives. It requires names for each quantity. The language and interpreter also include many features designed to help people avoid common problems with simulation modeling.
 
 Here is an example program:
 
