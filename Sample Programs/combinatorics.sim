@@ -1,0 +1,15 @@
+# Permutations and combinations.
+# http://www.mathsisfun.com/combinatorics/combinations-permutations.html
+# https://en.wikipedia.org/wiki/Combination
+# The factorial function is very fast.
+start = 5
+stop = 15
+interval = 0.00005
+n = time
+r = start
+# n things taken r at a time in order.
+permutations = factorial(n) / factorial(n - r)
+# n things taken r at a time in any order.
+combinations = factorial(n) / (factorial(r) * factorial(n - r))
+# number of times the factorial function is called.
+calls = 5 * (stop - start) / interval

@@ -1,0 +1,8 @@
+# Collatz sequence.
+# An example of an iterated function system.
+# https://en.wikipedia.org/wiki/Collatz_conjecture
+# https://www.youtube.com/watch?v=5mFpVDpKX70
+stop = 1000
+interval = 1
+print = 1
+n = if n / 2 = int(n / 2) then n / 2 else 3 * n + 1, initial 7

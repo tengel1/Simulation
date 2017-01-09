@@ -1,0 +1,7 @@
+# Simple rocket.
+mass_of_rocket = 100
+thrust = if time < stop / 2 then 1000 else 0
+gravity = 9.8 * mass_of_rocket
+acceleration = (thrust - gravity) / mass_of_rocket
+velocity = integral of acceleration, initial 0
+altitude = integral of velocity, initial 0, minimum 0

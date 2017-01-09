@@ -1,0 +1,6 @@
+# Bathtub.
+stop = 15
+fresh_water_flow = if time < stop / 2 then 12 else 0, label "fresh in", units "gal/min" # Zero order kinetics filling.
+drain_flow = if time > stop / 3 then water_height * 1.5 else 0, label "drain out", units "gal/min"  # First order kinetics draining.
+tub_volume = integral of fresh_water_flow - drain_flow, initial 0, minimum 0, label "water volume", units "gal"
+water_height = tub_volume * 231 / 24 /  48, label "water height", units "inch"  # 2 foot by 4 foot tub.

@@ -1,0 +1,5 @@
+# Integral and derivative.
+fn = if time < stop / 2 then time else stop - time
+dfn = derivative of fn
+ifn = integral of fn
+

@@ -1,0 +1,13 @@
+# Spirograph.
+# An example of parametric equations.
+# https://en.wikipedia.org/wiki/Hypotrochoid
+# https://en.wikipedia.org/wiki/Spirograph#Mathematical_basis
+start = 0
+stop = 6 * pi
+interval = 0.1
+print = 0.1
+R = 5, initial 5  # Radius of circle centered at the origin.
+r = 3, initial 3  # Radius of turning circle.
+d = 5, initial 5  # Radius of pen from center of turning circle.
+x = (R - r) × cos(time) + d × cos((R - r) × time ÷ r), initial 7
+y = (R - r) × sin(time) - d × sin((R - r) × time ÷ r), initial 0

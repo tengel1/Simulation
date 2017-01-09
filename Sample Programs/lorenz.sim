@@ -1,0 +1,10 @@
+# Lorenz attractor.
+# https://en.wikipedia.org/wiki/Lorenz_system
+interval = 0.001
+print = 0.01
+ρ = 28
+σ = 10
+β = 8 / 3
+x = integral of σ × (y - x), initial 1
+y = integral of x × (ρ - z) - y, initial 1
+z = integral of x × y - β × z, initial 1

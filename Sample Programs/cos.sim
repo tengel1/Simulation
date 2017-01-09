@@ -1,0 +1,10 @@
+# Integral and derivative of cosine function compared to sine function.
+# Shows accuracy of built-in numerical integration and differentiation.
+stop = 12.566371
+interval = 0.01
+print = 0.261799
+c = cos(time), initial 1
+s = sin(time)
+dc = derivative of c
+ic = integral of c
+error = abs(- s - dc) + abs(s - ic)

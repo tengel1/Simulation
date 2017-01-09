@@ -1,0 +1,17 @@
+# Three compartment pharmacokinetic model for propofol.
+stop = 400
+onsetProp = 30.0, label "onset time", units "sec"
+alphaProp = 120.0, label "alpha time", units "sec"
+betaProp = 14400, label "beta time", units "sec"
+v1Prop = 19700, label "volume 1", units "mg"
+v2Prop = 34800, label "volume 2", units "mg"
+v3Prop = 236000, label "volume 3", units "mg"
+c1Prop = comp1Prop / v1Prop, initial 100 / 19700, label "compartment 1", units "mg/ml"
+c2Prop = comp2Prop / v2Prop, label "compartment 2", units "mg/ml"
+c3Prop = comp3Prop / v3Prop, label "compartment 3", units "mg/ml"
+uptakeProp = (c1Prop - c2Prop) * v1Prop * 0.693 / onsetProp, label "onset", units "mg/sec"
+distProp = (c2Prop - c3Prop) * v2Prop * 0.693 / alphaProp, label "distribution", units "mg/sec"
+elimProp = comp3Prop * 0.693 / betaProp, label "elimination", units "mg/sec"
+comp1Prop = integral of -uptakeProp, initial 100, label "propofol 1", units "mg"
+comp2Prop = integral of uptakeProp - distProp, initial 0, label "propofol 2", units "mg"
+comp3Prop = integral of distProp - elimProp, initial 0, label "propofol 3", units "mg"

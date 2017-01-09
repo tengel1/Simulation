@@ -1,0 +1,8 @@
+# Fuzzy logic for selecting a tie.
+# https://en.wikipedia.org/wiki/Fuzzy_logic
+shirt_is_light = fraction(time / stop / 4)
+shirt_is_patterned = fraction(time / 2)
+shirt_is_colorful = fraction(time / stop)
+tie_should_be_light = not shirt_is_light
+tie_should_be_patterned = if shirt_is_light and not shirt_is_patterned then true else false
+tie_should_be_colorful = if shirt_is_colorful or shirt_is_patterned then true else false
