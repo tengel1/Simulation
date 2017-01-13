@@ -53,7 +53,7 @@ There are many more programs in the SamplePrograms folder.
     multiply_expression = exponent_expression {(("*" | "×")" | ("/" | "÷")) exponent_expression}.
     exponent_expression = negative_expression [("^" | "↑")" negative_expression].
     negative_expression = ["-"] value.
-value = number | name | function_name "(" expression {"," expression} ")" | "(" expression ")".
+    value = number | name | function_name "(" expression {"," expression} ")" | "(" expression ")".
 
     name = letter {letter | digit | "." | "_"}.
 	function_name = "sin" | "cos" | "tan" | "arctan" | "ln" | "sqrt" | ("integer" | "int") | ("fraction" | "frac") | ("absolute" | "abs") | ("factorial" | "fact") | ("degrees" | "deg") | ("radians" | "rad")
